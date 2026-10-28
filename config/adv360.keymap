@@ -35,6 +35,20 @@
             bindings = <&kp F &kp S &kp A &kp N &kp A &kp B &kp R &kp I &kp A &kp AT &kp M &kp M &kp DOT &kp S &kp T>;
             label = "MM_MAIL";
         };
+
+        linkedin: linkedin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp L &kp I &kp N &kp K &kp E &kp D &kp I &kp N &kp DOT &kp C &kp O &kp M &kp FSLH &kp I &kp N &kp FSLH &kp F &kp C &kp O &kp S &kp A &kp N &kp A &kp B &kp R &kp I &kp A &kp FSLH>;
+            label = "LINKEDIN";
+        };
+
+        blog: blog {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp B &kp L &kp O &kp G &kp DOT &kp F &kp C &kp O &kp S &kp A &kp N &kp A &kp B &kp R &kp I &kp A &kp DOT &kp C &kp O &kp M>;
+            label = "BLOG";
+        };
     };
 
     keymap {
@@ -65,11 +79,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1          &kp F2            &kp F3      &kp F4  &kp F5    &kp F6       &tog 1                                             &mo 3          &kp F7          &kp F8          &kp F9        &kp F10          &kp F11  &kp F12
-&kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans  &trans    &trans       &none                                              &none          &trans          &trans          &trans        &trans           &trans   &trans
-&trans          &trans            &trans      &trans  &trans    &trans       &none   &trans  &trans      &trans  &trans         &none          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
-&trans          &trans            &trans      &trans  &mm_mail  &work_gmail                  &trans      &trans                                &trans          &kp ENTER       &trans        &trans           &trans   &trans
-&trans          &trans            &trans      &trans  &trans                 &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp BACKSPACE                  &trans          &trans        &trans           &trans   &kp DELETE
+&kp F1          &kp F2            &kp F3      &kp F4     &kp F5    &kp F6       &tog 1                                             &mo 3          &kp F7          &kp F8          &kp F9        &kp F10          &kp F11  &kp F12
+&kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans     &trans    &trans       &none                                              &none          &trans          &trans          &trans        &trans           &trans   &trans
+&trans          &trans            &trans      &trans     &trans    &trans       &none   &trans  &trans      &trans  &trans         &none          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&trans          &trans            &blog       &linkedin  &mm_mail  &work_gmail                  &trans      &trans                                &trans          &kp ENTER       &trans        &trans           &trans   &trans
+&trans          &trans            &trans      &trans     &trans                 &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp BACKSPACE                  &trans          &trans        &trans           &trans   &kp DELETE
             >;
         };
 
